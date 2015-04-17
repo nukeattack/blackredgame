@@ -11,10 +11,14 @@ public abstract class GameObject {
 	}
 	
 	public void draw(){
-		
+		for(GameObject gameObject : children){
+			gameObject.draw();
+		}
 	}
 	
 	public void update(double dt){
-		
+		for(GameObject gameObject : children){
+			gameObject.update(dt);
+		}
 	}
 }
