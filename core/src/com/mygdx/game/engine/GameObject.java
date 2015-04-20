@@ -2,7 +2,7 @@ package com.mygdx.game.engine;
 
 import java.util.List;
 
-public abstract class GameObject {
+public class GameObject {
 	protected List<GameObject> children;
 	protected GameObject parent;
 	
@@ -20,5 +20,9 @@ public abstract class GameObject {
 		for(GameObject gameObject : children){
 			gameObject.update(dt);
 		}
+	}
+	
+	public List<GameObject> getChildren() {
+		return children;
 	}
 }

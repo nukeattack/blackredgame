@@ -13,5 +13,4 @@ public class GameMain extends Game {
 		screen = new MainScreen();
 		setScreen(screen);
 	}
-
 }
