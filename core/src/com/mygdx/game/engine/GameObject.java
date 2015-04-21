@@ -1,18 +1,21 @@
 package com.mygdx.game.engine;
 
+import java.util.LinkedList;
 import java.util.List;
+
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class GameObject {
 	protected List<GameObject> children;
 	protected GameObject parent;
 	
 	public GameObject(){
-		
+		children = new LinkedList<GameObject>();
 	}
 	
-	public void draw(){
+	public void draw(SpriteBatch spriteBatch){
 		for(GameObject gameObject : children){
-			gameObject.draw();
+			gameObject.draw(spriteBatch);
 		}
 	}
 	
