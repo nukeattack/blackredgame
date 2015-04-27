@@ -6,6 +6,8 @@ import com.mygdx.game.engine.GameObject;
 
 public class TextSprite extends GameObject {
 	private BitmapFont font;
+	private double x;
+	private double y;
 	
 	public TextSprite() {
 		font = new BitmapFont();

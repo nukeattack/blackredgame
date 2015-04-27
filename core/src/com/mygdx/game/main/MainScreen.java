@@ -6,7 +6,11 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
+import com.badlogic.gdx.physics.box2d.World;
 import com.mygdx.game.TextSprite;
+import com.mygdx.game.box2d.Box2D;
 import com.mygdx.game.engine.GameObject;
 
 public class MainScreen implements Screen {
@@ -36,6 +40,8 @@ public class MainScreen implements Screen {
 		spriteBatch.begin();
 		rootObject.draw(spriteBatch);
 		spriteBatch.end();
+		Box2D.instance.update(delta);
+		Box2D.instance.render(camera.combined);
 		camera.update();
 	}
 
