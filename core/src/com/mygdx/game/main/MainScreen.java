@@ -11,7 +11,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.mygdx.game.TextSprite;
 import com.mygdx.game.box2d.Box2D;
 import com.mygdx.game.engine.GameObject;
-import com.mygdx.game.engine.TweenInstance;
+import com.mygdx.game.engine.Animation;
 import com.mygdx.game.engine.VectorTweenAccessor;
 
 public class MainScreen implements Screen {
@@ -52,7 +52,7 @@ public class MainScreen implements Screen {
 		
 		camera.update();
 		
-		TweenInstance.manager.update(delta);
+		Animation.manager.update(delta);
 	}
 
 	@Override
